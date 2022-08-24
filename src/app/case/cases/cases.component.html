@@ -1,0 +1,524 @@
+
+<div class="ibox ">
+  <div class="ibox-title">
+    <h5>Dava Listesi</h5>
+  </div>
+  <div class="ibox-content">
+    <div class="row">
+      <div class="col-sm-6 b">
+        <div class="form-group">
+          <label class="col-lg-3 control-label">Dosya No</label>
+          <div class="col-lg-9">
+            <input type="text" name="txt_DOSYA_NO" ng-model="AramaKriter.DOSYA_NO" ng-enter="getDavaListesi()"
+              class="form-control ng-pristine ng-untouched ng-valid">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-lg-3 control-label">Dosya Esas No</label>
+          <div class="col-lg-9">
+            <input type="text" name="txt_DOSYA_ESAS_NO" ng-model="AramaKriter.DOSYA_ESAS_NO" ng-enter="getDavaListesi()"
+              class="form-control ng-pristine ng-untouched ng-valid">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-lg-3 control-label">Klasör No</label>
+          <div class="col-lg-9">
+            <input type="text" name="txt_KLASOR_NO" ng-model="AramaKriter.KLASOR_NO" ng-enter="getDavaListesi()"
+              class="form-control ng-pristine ng-untouched ng-valid">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-sm-3 control-label">Dava Türü</label>
+          <div class="col-sm-9">
+            <div class="input-group">
+              <div class="ui-select-container ui-select-bootstrap dropdown ng-valid" ng-class="{open: $select.open}"
+                ng-model="AramaKriter.DAVA_TURU_ID" ng-enter="getDavaListesi()" name="sel_DAVA_TURU_ID"
+                id="sel_DAVA_TURU_ID" theme="bootstrap" reset-search-input="false" style="min-width: 100px;"
+                title="Dava Türü Seçiniz">
+                <div class="ui-select-match" ng-hide="$select.open" ng-disabled="$select.disabled"
+                  ng-class="{'btn-default-focus':$select.focus}" placeholder="Lütfen Dava Türü Seçiniz."><span
+                    tabindex="-1" class="btn btn-default form-control ui-select-toggle"
+                    aria-label="Dava Türü Seçiniz activate" ng-disabled="$select.disabled" ng-click="$select.activate()"
+                    style="outline: 0;"><span ng-show="$select.isEmpty()"
+                      class="ui-select-placeholder text-muted ng-binding">Lütfen Dava Türü Seçiniz.</span> <span
+                      ng-hide="$select.isEmpty()" class="ui-select-match-text pull-left ng-hide"
+                      ng-class="{'ui-select-allow-clear': $select.allowClear &amp;&amp; !$select.isEmpty()}"
+                      ng-transclude=""><span class="ng-binding ng-scope">
+
+                      </span></span> <i class="caret pull-right" ng-click="$select.toggle($event)"></i> <a
+                      ng-show="$select.allowClear &amp;&amp; !$select.isEmpty()" aria-label="Dava Türü Seçiniz clear"
+                      style="margin-right: 10px" ng-click="$select.clear($event)"
+                      class="btn btn-xs btn-link pull-right ng-hide"><i class="glyphicon glyphicon-remove"
+                        aria-hidden="true"></i></a></span></div><input type="text" autocomplete="off" tabindex="-1"
+                  aria-expanded="true" aria-label="Dava Türü Seçiniz" aria-owns="ui-select-choices-4"
+                  aria-activedescendant="ui-select-choices-row-4-0"
+                  class="form-control ui-select-search ng-pristine ng-untouched ng-valid ng-hide"
+                  placeholder="Lütfen Dava Türü Seçiniz." ng-model="$select.search"
+                  ng-show="$select.searchEnabled &amp;&amp; $select.open">
+                <ul class="ui-select-choices ui-select-choices-content ui-select-dropdown dropdown-menu ng-scope"
+                  role="listbox" ng-show="$select.items.length > 0"
+                  repeat="dava.DAVA_TURU_ID as dava in DavaTuruListesi track by $index"
+                  refresh="getDavaTurleriListesi($select.search)" refresh-delay="500">
+                  <li class="ui-select-choices-group" id="ui-select-choices-4">
+                    <div class="divider ng-hide" ng-show="$select.isGrouped &amp;&amp; $index > 0"></div>
+                    <div ng-show="$select.isGrouped"
+                      class="ui-select-choices-group-label dropdown-header ng-binding ng-hide" ng-bind="$group.name">
+                    </div><!-- ngRepeat: dava in $select.items track by $index -->
+                    <!-- ngIf: $select.open -->
+                    <!-- end ngRepeat: dava in $select.items track by $index -->
+                    <!-- ngIf: $select.open -->
+                    <!-- end ngRepeat: dava in $select.items track by $index -->
+                    <!-- ngIf: $select.open -->
+                    <!-- end ngRepeat: dava in $select.items track by $index -->
+                    <!-- ngIf: $select.open -->
+                    <!-- end ngRepeat: dava in $select.items track by $index -->
+                    <!-- ngIf: $select.open -->
+                    <!-- end ngRepeat: dava in $select.items track by $index -->
+                    <!-- ngIf: $select.open -->
+                    <!-- end ngRepeat: dava in $select.items track by $index -->
+                    <!-- ngIf: $select.open -->
+                    <!-- end ngRepeat: dava in $select.items track by $index -->
+                    <!-- ngIf: $select.open -->
+                    <!-- end ngRepeat: dava in $select.items track by $index -->
+                    <!-- ngIf: $select.open -->
+                    <!-- end ngRepeat: dava in $select.items track by $index -->
+                    <!-- ngIf: $select.open -->
+                    <!-- end ngRepeat: dava in $select.items track by $index -->
+                    <!-- ngIf: $select.open -->
+                    <!-- end ngRepeat: dava in $select.items track by $index -->
+                    <!-- ngIf: $select.open -->
+                    <!-- end ngRepeat: dava in $select.items track by $index -->
+                    <!-- ngIf: $select.open -->
+                    <!-- end ngRepeat: dava in $select.items track by $index -->
+                    <!-- ngIf: $select.open -->
+                    <!-- end ngRepeat: dava in $select.items track by $index -->
+                    <!-- ngIf: $select.open -->
+                    <!-- end ngRepeat: dava in $select.items track by $index -->
+                  </li>
+                </ul>
+                
+                <input ng-disabled="$select.disabled"
+                  class="ui-select-focusser ui-select-offscreen ng-scope" type="text" id="focusser-4"
+                  aria-label="Dava Türü Seçiniz focus" aria-haspopup="true" role="button">
+              </div>
+              <span class="input-group-btn btn-xs">
+                <a ng-click="AramaKriter.DAVA_TURU_ID = undefined" class="btn btn-danger" tooltip="Seçimi temizle">
+                  <i class="fa fa-eraser"></i>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-sm-3 control-label">Suç Türü</label>
+          <div class="col-sm-9">
+            <div class="input-group">
+              <div class="ui-select-container ui-select-bootstrap dropdown ng-valid" ng-class="{open: $select.open}"
+                ng-model="AramaKriter.SUC_TIPI_ID" ng-enter="getDavaListesi()" name="sel_SUC_TIPI_ID"
+                id="sel_SUC_TIPI_ID" theme="bootstrap" reset-search-input="false" style="min-width: 100px;"
+                title="Suç Türü Seçiniz">
+                <div class="ui-select-match" ng-hide="$select.open" ng-disabled="$select.disabled"
+                  ng-class="{'btn-default-focus':$select.focus}" placeholder="Lütfen Suç Türü Seçiniz."><span
+                    tabindex="-1" class="btn btn-default form-control ui-select-toggle"
+                    aria-label="Suç Türü Seçiniz activate" ng-disabled="$select.disabled" ng-click="$select.activate()"
+                    style="outline: 0;"><span ng-show="$select.isEmpty()"
+                      class="ui-select-placeholder text-muted ng-binding">Lütfen Suç Türü Seçiniz.</span> <span
+                      ng-hide="$select.isEmpty()" class="ui-select-match-text pull-left ng-hide"
+                      ng-class="{'ui-select-allow-clear': $select.allowClear &amp;&amp; !$select.isEmpty()}"
+                      ng-transclude=""><span class="ng-binding ng-scope">
+
+                      </span></span> <i class="caret pull-right" ng-click="$select.toggle($event)"></i> <a
+                      ng-show="$select.allowClear &amp;&amp; !$select.isEmpty()" aria-label="Suç Türü Seçiniz clear"
+                      style="margin-right: 10px" ng-click="$select.clear($event)"
+                      class="btn btn-xs btn-link pull-right ng-hide"><i class="glyphicon glyphicon-remove"
+                        aria-hidden="true"></i></a></span></div><input type="text" autocomplete="off" tabindex="-1"
+                  aria-expanded="true" aria-label="Suç Türü Seçiniz" aria-owns="ui-select-choices-5"
+                  aria-activedescendant="ui-select-choices-row-5-0"
+                  class="form-control ui-select-search ng-pristine ng-untouched ng-valid ng-hide"
+                  placeholder="Lütfen Suç Türü Seçiniz." ng-model="$select.search"
+                  ng-show="$select.searchEnabled &amp;&amp; $select.open">
+                <ul class="ui-select-choices ui-select-choices-content ui-select-dropdown dropdown-menu ng-scope"
+                  role="listbox" ng-show="$select.items.length > 0"
+                  repeat="dava.SUC_TIPI_ID as dava in SucTipleriListesi track by $index"
+                  refresh="getSucTipleriListesi($select.search)" refresh-delay="500">
+                  <li class="ui-select-choices-group" id="ui-select-choices-5">
+                    <div class="divider ng-hide" ng-show="$select.isGrouped &amp;&amp; $index > 0"></div>
+                    <div ng-show="$select.isGrouped"
+                      class="ui-select-choices-group-label dropdown-header ng-binding ng-hide" ng-bind="$group.name">
+                    </div>
+                    <!-- end ngRepeat: dava in $select.items track by $index -->
+                    <!-- ngIf: $select.open -->
+                    <!-- end ngRepeat: dava in $select.items track by $index -->
+                    <!-- ngIf: $select.open -->
+                    <!-- end ngRepeat: dava in $select.items track by $index -->
+                    <!-- ngIf: $select.open -->
+                    <!-- end ngRepeat: dava in $select.items track by $index -->
+                    <!-- ngIf: $select.open -->
+                    <!-- end ngRepeat: dava in $select.items track by $index -->
+                    <!-- ngIf: $select.open -->
+                    <!-- end ngRepeat: dava in $select.items track by $index -->
+                    <!-- ngIf: $select.open -->
+                    <!-- end ngRepeat: dava in $select.items track by $index -->
+                    <!-- ngIf: $select.open -->
+                    <!-- end ngRepeat: dava in $select.items track by $index -->
+                  </li>
+                </ul>
+                <input ng-disabled="$select.disabled"
+                  class="ui-select-focusser ui-select-offscreen ng-scope" type="text" id="focusser-5"
+                  aria-label="Suç Türü Seçiniz focus" aria-haspopup="true" role="button">
+              </div>
+              <span class="input-group-btn btn-xs">
+                <a ng-click="AramaKriter.SUC_TIPI_ID= undefined" class="btn btn-danger" tooltip="Seçimi temizle">
+                  <i class="fa fa-eraser"></i>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label class="col-sm-3 control-label">Dava Durum</label>
+          <div class="col-sm-9">
+            <ol class="nya-bs-select form-control ng-pristine ng-untouched btn-group ng-invalid ng-invalid-required"
+              name="sel_DAVA_DURUM_ID" ng-model="AramaKriter.DAVA_DURUM_ID" ng-enter="getDavaListesi()"
+              data-live-search="true" title="Lütfen Dava Durumu Seçiniz" required="true">
+
+              <button class="btn btn-default dropdown-toggle form-control show-special-title" type="button"><span
+                  class="pull-left filter-option"></span><span class="pull-left special-title">Lütfen Dava Durumu
+                  Seçiniz</span>&nbsp;<span class="caret"></span></button>
+              <div class="dropdown-menu open">
+                <div class="bs-searchbox"><input type="text" class="form-control"></div>
+                <ul class="dropdown-menu inner">
+                  <!-- nyaBsOption: item in DavaDurumListesi -->
+                  <li nya-bs-option="item in DavaDurumListesi" data-value="item.DAVA_DURUM_ID" data-size="10"
+                    class="ng-scope nya-bs-option">
+                    <a tabindex="0" class="ng-binding">
+                      Açıldı
+                      <span class="glyphicon glyphicon-ok check-mark"></span>
+                    </a>
+                  </li><!-- end nyaBsOption: item in DavaDurumListesi -->
+                  <li nya-bs-option="item in DavaDurumListesi" data-value="item.DAVA_DURUM_ID" data-size="10"
+                    class="ng-scope nya-bs-option">
+                    <a tabindex="0" class="ng-binding">
+                      Ön İncelemede
+                      <span class="glyphicon glyphicon-ok check-mark"></span>
+                    </a>
+                  </li><!-- end nyaBsOption: item in DavaDurumListesi -->
+                  <li nya-bs-option="item in DavaDurumListesi" data-value="item.DAVA_DURUM_ID" data-size="10"
+                    class="ng-scope nya-bs-option">
+                    <a tabindex="0" class="ng-binding">
+                      Derdest
+                      <span class="glyphicon glyphicon-ok check-mark"></span>
+                    </a>
+                  </li><!-- end nyaBsOption: item in DavaDurumListesi -->
+                  <li nya-bs-option="item in DavaDurumListesi" data-value="item.DAVA_DURUM_ID" data-size="10"
+                    class="ng-scope nya-bs-option">
+                    <a tabindex="0" class="ng-binding">
+                      Karar Verildi
+                      <span class="glyphicon glyphicon-ok check-mark"></span>
+                    </a>
+                  </li><!-- end nyaBsOption: item in DavaDurumListesi -->
+                  <li nya-bs-option="item in DavaDurumListesi" data-value="item.DAVA_DURUM_ID" data-size="10"
+                    class="ng-scope nya-bs-option">
+                    <a tabindex="0" class="ng-binding">
+                      İstinaf
+                      <span class="glyphicon glyphicon-ok check-mark"></span>
+                    </a>
+                  </li><!-- end nyaBsOption: item in DavaDurumListesi -->
+                  <li nya-bs-option="item in DavaDurumListesi" data-value="item.DAVA_DURUM_ID" data-size="10"
+                    class="ng-scope nya-bs-option">
+                    <a tabindex="0" class="ng-binding">
+                      Temyiz
+                      <span class="glyphicon glyphicon-ok check-mark"></span>
+                    </a>
+                  </li><!-- end nyaBsOption: item in DavaDurumListesi -->
+                  <li nya-bs-option="item in DavaDurumListesi" data-value="item.DAVA_DURUM_ID" data-size="10"
+                    class="ng-scope nya-bs-option">
+                    <a tabindex="0" class="ng-binding">
+                      Karar Düzeltme
+                      <span class="glyphicon glyphicon-ok check-mark"></span>
+                    </a>
+                  </li><!-- end nyaBsOption: item in DavaDurumListesi -->
+                  <li nya-bs-option="item in DavaDurumListesi" data-value="item.DAVA_DURUM_ID" data-size="10"
+                    class="ng-scope nya-bs-option">
+                    <a tabindex="0" class="ng-binding">
+                      Karar Kesinleşti
+                      <span class="glyphicon glyphicon-ok check-mark"></span>
+                    </a>
+                  </li><!-- end nyaBsOption: item in DavaDurumListesi -->
+                  <li nya-bs-option="item in DavaDurumListesi" data-value="item.DAVA_DURUM_ID" data-size="10"
+                    class="ng-scope nya-bs-option">
+                    <a tabindex="0" class="ng-binding">
+                      Müvekkile iade
+                      <span class="glyphicon glyphicon-ok check-mark"></span>
+                    </a>
+                  </li><!-- end nyaBsOption: item in DavaDurumListesi -->
+                  <li nya-bs-option="item in DavaDurumListesi" data-value="item.DAVA_DURUM_ID" data-size="10"
+                    class="ng-scope nya-bs-option">
+                    <a tabindex="0" class="ng-binding">
+                      Hazırlanıyor
+                      <span class="glyphicon glyphicon-ok check-mark"></span>
+                    </a>
+                  </li><!-- end nyaBsOption: item in DavaDurumListesi -->
+                  <li nya-bs-option="item in DavaDurumListesi" data-value="item.DAVA_DURUM_ID" data-size="10"
+                    class="ng-scope nya-bs-option">
+                    <a tabindex="0" class="ng-binding">
+                      Feragat
+                      <span class="glyphicon glyphicon-ok check-mark"></span>
+                    </a>
+                  </li><!-- end nyaBsOption: item in DavaDurumListesi -->
+                  <li nya-bs-option="item in DavaDurumListesi" data-value="item.DAVA_DURUM_ID" data-size="10"
+                    class="ng-scope nya-bs-option">
+                    <a tabindex="0" class="ng-binding">
+                      İşlemden Kaldırıldı
+                      <span class="glyphicon glyphicon-ok check-mark"></span>
+                    </a>
+                  </li><!-- end nyaBsOption: item in DavaDurumListesi -->
+                  <li nya-bs-option="item in DavaDurumListesi" data-value="item.DAVA_DURUM_ID" data-size="10"
+                    class="ng-scope nya-bs-option">
+                    <a tabindex="0" class="ng-binding">
+                      Soruşturma
+                      <span class="glyphicon glyphicon-ok check-mark"></span>
+                    </a>
+                  </li><!-- end nyaBsOption: item in DavaDurumListesi -->
+                  <li class="no-search-result"><span>NO SEARCH RESULT</span></li>
+                </ul>
+              </div>
+            </ol>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-lg-3 control-label">Taraf Ad Soyad</label>
+          <div class="col-lg-9">
+            <input type="text" name="txt_AD_SOYAD" ng-model="AramaKriter.AD_SOYAD" ng-enter="getDavaListesi()"
+              class="form-control ng-pristine ng-untouched ng-valid">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-sm-3 control-label">Kurum</label>
+          <div class="col-sm-9">
+            <div class="col-sm-12 input-group">
+              <input type="text" class="form-control ng-pristine ng-untouched ng-valid" ng-model="AramaKriter.KURUM_ADI"
+                name="txt_KURUM_ADI" disabled="">
+              <span class="input-group-btn">
+                <button type="button" class="btn btn-s btn-info form-actions" ng-enter="getDavaListesi()"
+                  ng-click="kurumSec()" tooltip="Kurum Seç"
+                  ng-show="AramaKriter.KURUM_ID <= 0 || AramaKriter.KURUM_ID == undefined">
+                  <i class="fa fa-plus"></i>&nbsp;
+                </button>
+                <button type="button" class="btn btn-s btn-danger form-actions ng-hide" ng-enter="getDavaListesi()"
+                  ng-click="kurumTemizle()" tooltip="Temizle" ng-show="AramaKriter.KURUM_ID > 0">
+                  <i class="fa fa-remove"></i>&nbsp;
+                </button>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-sm-3 control-label">Dava Tarihi</label>
+          <div class="col-sm-4">
+            <input type="datetime" id="txt_DAVA_TARIHI_BASLANGIC" name="txt_DAVA_TARIHI_BASLANGIC"
+              ng-enter="getDavaListesi()" ng-model="AramaKriter.DAVA_TARIHI_BASLANGIC" nextgen-date-picker=""
+              class="form-control ng-pristine ng-untouched ng-valid ng-isolate-scope">
+          </div>
+          <div class="col-sm-1">
+            <h3>/</h3>
+          </div>
+          <div class="col-sm-4">
+            <input type="datetime" id="txt_DAVA_TARIHI_BITIS" name="txt_DAVA_TARIHI_BITIS" ng-enter="getDavaListesi()"
+              ng-model="AramaKriter.DAVA_TARIHI_BITIS" nextgen-date-picker=""
+              class="form-control ng-pristine ng-untouched ng-valid ng-isolate-scope">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-sm-3 control-label">Kilitli Olanlar</label>
+          <div class="col-sm-1">
+            <div class="mt-first-cb">
+              <div class="icheckbox_square-green" style="position: relative;"><input icheck="" type="checkbox"
+                  name="txt_KILIT" class="form-control ng-pristine ng-untouched ng-valid" ng-enter="getDavaListesi()"
+                  ng-model="AramaKriter.KILIT" style="position: absolute; opacity: 0;"><ins class="iCheck-helper"
+                  style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins>
+              </div>
+            </div>
+          </div>
+          <label class="col-sm-3 control-label">Dava Arşivine Kaldırılanlar</label>
+          <div class="col-sm-1">
+            <div class="mt-first-cb">
+              <div class="icheckbox_square-green" style="position: relative;"><input icheck="" type="checkbox"
+                  name="txt_ARSIVE_KALDIRILDI" class="form-control ng-pristine ng-untouched ng-valid"
+                  ng-enter="getDavaListesi()" ng-model="AramaKriter.ARSIVE_KALDIRILDI"
+                  style="position: absolute; opacity: 0;"><ins class="iCheck-helper"
+                  style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins>
+              </div>
+            </div>
+          </div>
+          <label class="col-sm-1 control-label">Arşiv No</label>
+          <div class="col-sm-3">
+            <div class="mt-first-cb">
+              <input type="text" name="txt_ARSIVE_NO" class="form-control ng-pristine ng-untouched ng-valid"
+                ng-enter="getDavaListesi()" ng-model="AramaKriter.ARSIV_NO">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12">
+        <div class="pull-right">
+          <a ui-sref="dava.davakayit()" class="btn btn-success btn-sm"
+            tooltip="Yeni dava kaydı açmak için lütfen tıklayınız." href="#/dava/davakayit//"><i
+              class="fa fa-plus"></i>&nbsp;Yeni Kayıt</a>
+          <a ng-click="modalDavaListesiYazdir()" class="btn btn-sm btn-info">
+            <i class="fa fa-print"></i> Yazdır
+          </a>
+          <a ng-click="getDavaListesi()" class="btn btn-primary btn-sm"><i class="fa fa-search"></i>&nbsp;Sorgula</a>
+        </div>
+      </div>
+    </div>
+    <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper form-inline dt-bootstrap4">
+      <div class="row">
+        <div class="col-sm-12"></div>
+        <div class="col-sm-8">
+          <div class="pull-right">
+            <div class="dt-buttons btn-group"></div>
+          </div>
+          <div class="pull-right"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <table datatable="ng" dt-options="dtOptions" dt-column-defs="dtColumnDefs"
+            class="table table-striped table-bordered tablo ng-isolate-scope dtr-inline dataTable"
+            style="display: table;" id="DataTables_Table_0" role="grid" aria-describedby="DataTables_Table_0_info">
+            <thead class="ng-scope">
+              <tr role="row">
+                <th class="hidden-xs hidden-sm hidden-md no-wrap sorting_disabled"
+                  style="background: none !important; width: 86px;" ng-click="siralamaDegistir('DAVA_ID');" rowspan="1"
+                  colspan="1" aria-label="Sıra No "><b>Sıra No <i ng-class="siralamaIconGetir('DAVA_ID');"
+                      class="fa fa-angle-down"></i></b></th>
+                <th class="no-wrap hidden-350px sorting_disabled"
+                  style="background:none !important; max-width:120px; width:110px;" rowspan="1" colspan="1"
+                  aria-label="İşlemler">İşlemler</th>
+                <th class="hidden-xs no-wrap sorting_disabled" ng-click="siralamaDegistir('DOSYA_NO');" rowspan="1"
+                  colspan="1" aria-label="Dosya No " style="width: 100px;"><b>Dosya No <i
+                      ng-class="siralamaIconGetir('DOSYA_NO');" class="fa fa-angle-right"></i></b></th>
+                <th class="hidden-xs hidden-sm no-wrap sorting_disabled"
+                  ng-click="siralamaDegistir('MUVEKKILLER_AD_SOYAD');" rowspan="1" colspan="1" aria-label="Müvekkil "
+                  style="width: 267px;"><b>Müvekkil <i ng-class="siralamaIconGetir('MUVEKKILLER_AD_SOYAD');"
+                      class="fa fa-angle-right"></i></b></th>
+                <th class="hidden-xs hidden-sm no-wrap sorting_disabled"
+                  ng-click="siralamaDegistir('KARSI_TARAF_AD_SOYAD');" rowspan="1" colspan="1" aria-label="Karşı Taraf "
+                  style="width: 236px;"><b>Karşı Taraf <i ng-class="siralamaIconGetir('KARSI_TARAF_AD_SOYAD');"
+                      class="fa fa-angle-right"></i></b></th>
+                <th class="hidden-xs hidden-sm hidden-md  no-wrap sorting_disabled"
+                  ng-click="siralamaDegistir('KLASOR_NO');" rowspan="1" colspan="1" aria-label="Klasör No "
+                  style="width: 102px;"><b>Klasör No <i ng-class="siralamaIconGetir('KLASOR_NO');"
+                      class="fa fa-angle-right"></i></b></th>
+                <th class="no-wrap hidden-350px sorting_disabled" style="max-width: 100px !important; width: 140px;"
+                  ng-click="siralamaDegistir('DOSYA_ESAS_NO');" rowspan="1" colspan="1" aria-label="Dosya Esas No ">
+                  <b>Dosya Esas No <i ng-class="siralamaIconGetir('DOSYA_ESAS_NO');" class="fa fa-angle-right"></i></b>
+                </th>
+                <th class="hidden-xs hidden-sm hidden-md  no-wrap sorting_disabled"
+                  ng-click="siralamaDegistir('KURUM_ADI');" rowspan="1" colspan="1" aria-label="Kurum "
+                  style="width: 145px;"><b>Kurum <i ng-class="siralamaIconGetir('KURUM_ADI');"
+                      class="fa fa-angle-right"></i></b></th>
+                <th class="hidden-xs hidden-sm hidden-md  no-wrap sorting_disabled"
+                  ng-click="siralamaDegistir('DAVA_DURUM_ADI');" rowspan="1" colspan="1" aria-label="Dava Durumu "
+                  style="width: 137px;"><b>Dava Durumu <i ng-class="siralamaIconGetir('DAVA_DURUM_ADI');"
+                      class="fa fa-angle-right"></i></b></th>
+                <th class="hidden-xs hidden-sm hidden-md  no-wrap sorting_disabled"
+                  ng-click="siralamaDegistir('ACIKLAMA');" rowspan="1" colspan="1" aria-label="Açıklama "
+                  style="width: 98px;"><b>Açıklama <i ng-class="siralamaIconGetir('ACIKLAMA');"
+                      class="fa fa-angle-right"></i></b></th>
+              </tr>
+            </thead>
+            <tbody style="font-size:12px" class="ng-scope">
+              <!-- ngRepeat: post in DavaListesi -->
+              <!-- end ngRepeat: post in DavaListesi -->
+              <tr ng-repeat="post in DavaListesi " style="cursor:pointer;" class="ng-scope odd" role="row">
+                <td class="project-title hidden-xs hidden-sm hidden-md" tabindex="0">
+                  <span class="label label-success ng-binding">20178</span>
+                </td>
+                <td class="text-nowrap hidden-350px" style="z-index:100000; max-width:120px; width:110px;">
+                  <a ng-click="davaSmsGonder(post)" class="btn btn-sm  btn-warning" tooltip="Sms Gönder"
+                    tooltip-append-to-body="true"><i class="fa fa-envelope"></i></a>
+                  <a id="kayitDuzenle" ng-click="davaKayitSayfasiAc(post.DAVA_ID)" class="btn btn-sm  btn-success"
+                    tooltip="Düzenle" tooltip-append-to-body="true"><i class="fa fa-pencil"></i></a>
+                  <a ng-click="modalSilmeOnayi(post.DAVA_ID)" class="btn btn-sm  btn-danger" tooltip="Sil"
+                    tooltip-append-to-body="true"><i class="fa fa-remove"></i></a>
+                </td>
+                <td class="hidden-xs">
+                  <span ng-bind-html="post.DOSYA_NO" class="ng-binding"></span>
+                </td>
+                <td class="hidden-xs hidden-sm project-title">
+                  <a ng-click="davaKayitSayfasiAc(post.DAVA_ID)">
+                    <span ng-bind-html="post.MUVEKKILLER_AD_SOYAD | ifEmpty:'Müvekkil Girilmemiştir'"
+                      class="ng-binding"><span class="null-text">Müvekkil Girilmemiştir</span></span>
+                  </a>
+                </td>
+                <td class="hidden-xs hidden-sm">
+                  <span ng-bind-html="post.KARSI_TARAF_AD_SOYAD | ifEmpty:'Karşı Taraf Girilmemiştir'"
+                    class="ng-binding"><span class="null-text">Karşı Taraf Girilmemiştir</span></span>
+                </td>
+                <td class="hidden-xs hidden-sm hidden-md ">
+                  <span ng-bind-html="post.KLASOR_NO" class="ng-binding">7031</span>
+                </td>
+                <td ui-sref="dava.davakayit({ davaID: post.DAVA_ID})" class="no-wrap hidden-350px"
+                  style="max-width:100px !important" href="#/dava/davakayit/20178/">
+                  <span ng-bind-html="post.DOSYA_ESAS_NO" class="ng-binding">2015/787</span>
+                </td>
+                <td class="hidden-xs hidden-sm hidden-md ">
+                  <span ng-bind-html="post.KURUM_ADI" class="ng-binding">Malatya 1. Aile</span>
+                </td>
+                <td class="hidden-xs hidden-sm hidden-md ">
+                  <span ng-bind-html="post.DAVA_DURUM_ADI" class="ng-binding">Açıldı</span>
+                </td>
+                <td class="hidden-xs hidden-sm hidden-md ">
+                  <span ng-bind-html="post.ACIKLAMA" class="ng-binding"></span>
+                </td>
+              </tr>
+            </tbody>
+            <tfoot class="ng-scope">
+              <tr>
+                <td colspan="10" class="text-center" rowspan="1">
+                  <ul class="pagination-sm pagination ng-isolate-scope ng-valid" ng-model="AramaKriter.SayfaNo"
+                    ng-change="getDavaListesi(AramaKriter)" total-items="toplamDavaSayisi"
+                    items-per-page="AramaKriter.SayfaBasinaKayitSayisi" max-size="Ayarlar.MaxSayfaSayisi"
+                    previous-text="Önceki" next-text="Sonraki" first-text="İlk Sayfa" last-text="Son Sayfa"
+                    boundary-links="true">
+                    <!-- ngIf: boundaryLinks -->
+                    <li ng-if="boundaryLinks" ng-class="{disabled: noPrevious()}" class="ng-scope disabled"><a href=""
+                        ng-click="selectPage(1, $event)" class="ng-binding">İlk Sayfa</a></li>
+                    <!-- end ngIf: boundaryLinks -->
+                    <!-- ngIf: directionLinks -->
+                    <li ng-if="directionLinks" ng-class="{disabled: noPrevious()}" class="ng-scope disabled"><a href=""
+                        ng-click="selectPage(page - 1, $event)" class="ng-binding">Önceki</a></li>
+                    <!-- end ngIf: directionLinks -->
+                    <!-- ngRepeat: page in pages track by $index -->
+                    <li ng-repeat="page in pages track by $index" ng-class="{active: page.active}"
+                      class="ng-scope active"><a href="" ng-click="selectPage(page.number, $event)"
+                        class="ng-binding">1</a></li><!-- end ngRepeat: page in pages track by $index -->
+                    <!-- ngIf: directionLinks -->
+                    <li ng-if="directionLinks" ng-class="{disabled: noNext()}" class="ng-scope disabled"><a href=""
+                        ng-click="selectPage(page + 1, $event)" class="ng-binding">Sonraki</a></li>
+                    <!-- end ngIf: directionLinks -->
+                    <!-- ngIf: boundaryLinks -->
+                    <li ng-if="boundaryLinks" ng-class="{disabled: noNext()}" class="ng-scope disabled"><a href=""
+                        ng-click="selectPage(totalPages, $event)" class="ng-binding">Son Sayfa</a></li>
+                    <!-- end ngIf: boundaryLinks -->
+                  </ul>
+                </td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="dataTables_info" id="DataTables_Table_0_info" role="status" aria-live="polite">1 ile 1 arasında
+            toplam 1 kayıt</div>
+        </div>
+        <div class="col-sm-12"></div>
+      </div>
+    </div>
+  </div>
+</div>

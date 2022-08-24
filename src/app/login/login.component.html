@@ -1,0 +1,32 @@
+<body class="text-center">
+  
+  <main class="form-signin w-100 m-auto">
+    <form>
+      <img class="mb-4" src="../../assets/sengun-hukuk-logo4.png" alt="">
+      <h1 class="h3 mb-3 fw-normal">Lütfen Giriş Yapınız</h1>
+
+      <div class="form-floating">
+        <input type="email" class="form-control" id="userName" #userName="ngModel" 
+        [(ngModel)]="model.userName" name="userName" placeholder="name@example.com">
+        <label for="inputEmail">Email</label>
+      </div>
+      <div class="form-floating">
+        <input type="password" class="form-control" id="password" #password="ngModel" 
+        [(ngModel)]="model.password" name="password" placeholder="Password">
+
+        <label for="inputPassword">Şifre</label>
+      </div>
+
+      <div class="checkbox mb-3">
+        <label>
+          <input type="checkbox" value="remember-me"> Remember me
+        </label>
+      </div>
+      <button class="w-100 btn btn-lg btn-primary" type="submit">Giriş</button>
+      <p class="mt-5 mb-3 text-muted">&copy; 2017–2022</p>
+    </form>
+  </main>
+
+
+
+</body>
